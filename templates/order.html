@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Document</title>
+		<link href="/static/style.css" rel="stylesheet" />
+	</head>
+	<body class="order-page">
+		<header class="order-header">
+			<h1>Order Number</h1>
+			<h3>{{ orders.order_number }}</h3>
+		</header>
+		<main>
+			<div class="customer-info">
+				<h3>Customer: {{ orders. customer_name }}</h3>
+				<h3>Title: {{ orders.title }} | Author: {{ orders.author }}</h3>
+				<h4>
+					Order Date: {{ orders.order_date }} | Quantity: {{ orders.quantity }}
+				</h4>
+			</div>
+		</main>
+		<footer></footer>
+	</body>
+</html>
