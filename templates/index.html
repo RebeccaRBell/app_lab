@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/static/style.css" />
+		<title>BookShop</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1>BookShop</h1>
+			<h3>Orders</h3>
+		</header>
+		<div class="headings-container">
+			<ul class="headings">
+				<li>Quantity</li>
+				<li>Book Title</li>
+				<li>Author</li>
+				<li>Order Date</li>
+				<li>Customer Name</li>
+				<li>Order Num</li>
+			</ul>
+		</div>
+		{% for order in orders %}
+		<div class="orders-container">
+			<a href="orders/{{loop.index-1}}">
+				<ul class="orders">
+					<li class="quantity">{{ order.quantity }}</li>
+					<li class="order-details">{{ order.title }}</li>
+					<li class="order-details">{{ order.author }}</li>
+					<li class="order-details">{{ order.order_date }}</li>
+					<li class="order-details">{{ order.customer_name }}</li>
+					<li class="order-details">{{ order.order_number }}</li>
+				</ul>
+			</a>
+		</div>
+		<footer></footer>
+		{% endfor %}
+	</body>
+</html>
